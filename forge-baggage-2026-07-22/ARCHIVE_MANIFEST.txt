@@ -1,0 +1,30 @@
+# Forge baggage archived 2026-07-22 (archive-first, never delete — NeXuS protocol)
+# Reason: redundant .img backups + raw kernel + apk + *.bak; source now in nexus-forge.fossil.
+# Original root: /home/user/NeXuS/forge
+# Restore any file:  mv <this-archive>/<relpath>  /home/user/NeXuS/forge/<relpath>
+
+## ARCHIVED (moved here — user-owned, 55M)
+fc/linux-virt-6.18.39-r0.apk
+fc/vmlinuz-6.18.39-0-virt
+05-orchestration/forge.yaml.bak-20260721-163326
+NeXuS-Desktops.md.bak-peewee
+firecracker-boot.sh.bak-20260721-174252
+firecracker-boot.sh.bak-20260722-134757
+firecracker-boot.sh.bak-20260722-135742
+firecracker-config.json.bak-20260721-163359
+
+## PENDING — root-owned, needs `doas` to move (the 7 redundant .img snapshots):
+#   doas mv /home/user/NeXuS/forge/01-alpine-hardener/vm/nexus-node-custom.img.bak-* \
+#           /home/user/NeXuS/archive/forge-baggage-2026-07-22/01-alpine-hardener/vm/
+01-alpine-hardener/vm/nexus-node-custom.img.bak-20260721-164908
+01-alpine-hardener/vm/nexus-node-custom.img.bak-20260721-173718
+01-alpine-hardener/vm/nexus-node-custom.img.bak-20260721-174103
+01-alpine-hardener/vm/nexus-node-custom.img.bak-20260721-174947
+01-alpine-hardener/vm/nexus-node-custom.img.bak-20260721-175920
+01-alpine-hardener/vm/nexus-node-custom.img.bak-20260721-180416
+01-alpine-hardener/vm/nexus-node-custom.img.bak-20260721-180558
+
+## KEPT LIVE (do NOT archive — referenced by firecracker-config.json):
+#   01-alpine-hardener/vm/nexus-node-custom.img   (the live node image)
+#   fc/vmlinux-6.18.39-0-virt                      (ELF kernel firecracker boots)
+#   fc/initramfs-6.18.39-0-virt.gz                 (initramfs)

@@ -1,0 +1,38 @@
+# NeXuS Archive .gitignore
+
+# VM images and disk images — too large for GitHub
+*.img
+*.img.bak*
+*.iso
+*.qcow2
+*.vmdk
+*.vdi
+
+# Kernel / boot binaries
+vmlinuz*
+*.apk
+
+# Compiled / binary artifacts
+*.o
+*.so
+*.a
+*.bin
+*.elf
+
+# Backup files
+*.bak
+*.bak-*
+*.backup
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
